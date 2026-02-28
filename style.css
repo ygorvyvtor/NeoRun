@@ -38,7 +38,8 @@ nav a {
     text-decoration: none;
     color: #fff;
     position: relative;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    display: inline-block; /* necessário para o scale funcionar */
 }
 
 /* Linha animada */
@@ -50,7 +51,7 @@ nav a::after {
     background: #39ff14;
     left: 0;
     bottom: -5px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 nav a:hover::after,
@@ -58,10 +59,13 @@ nav a.active::after {
     width: 100%;
 }
 
+/* 🔥 Efeito de crescer */
 nav a:hover {
     color: #39ff14;
+    transform: scale(1.15); /* aumenta 15% */
 }
 
+/* Quando ativo */
 nav a.active {
     color: #39ff14;
 }
