@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+header h1 {
+    color: #39ff14;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Linha animada */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #39ff14;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #39ff14;
+}
+
+nav a.active {
+    color: #39ff14;
+}
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+        url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 60px;
+}
+
+.hero p {
+    margin: 20px 0;
+    color: #ccc;
+}
+
+.btn-green {
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: 2px solid #39ff14;
+    color: #39ff14;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-green:hover {
+    background: #39ff14;
+    color: #000;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 120px 80px;
+    min-height: 100vh;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 35px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/* CARDS */
+
+.logo {
+    text-decoration: none;
+    color: #39ff14;
+    /* mesma cor do seu logo */
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #111;
+    padding: 40px;
+    border-radius: 15px;
+    width: 280px;
+    border: 1px solid #39ff14;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px #39ff14;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    section {
+        padding: 100px 20px;
+    }
+
+    .hero h2 {
+        font-size: 35px;
+    }
+
+    nav {
+        display: none;
+    }
+}
